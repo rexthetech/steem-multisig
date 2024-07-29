@@ -8,7 +8,7 @@ npm install
 
 Requires a running instance of steem-multisig-backend.
 
-Edit source/config.json to set local URL, Steem API URL, and steem-multisig-backend instance URL.
+Edit src/config.json to set local URL, Steem API URL, and steem-multisig-backend instance URL.
 
 ## Run
 
