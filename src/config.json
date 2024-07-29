@@ -1,0 +1,5 @@
+{
+  "STEEM_API_URL": "https://api.pennsif.net",
+  "MULTISIG_API_URL": "https://multisig.pennsif.net:4000",
+  "MULTISIG_API_LOCAL": "http://localhost:4000"
+}

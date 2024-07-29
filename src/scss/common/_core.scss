@@ -1,0 +1,53 @@
+html{
+    font-family:              sans-serif;
+    line-height:              1.5;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust:     100%;
+    -ms-overflow-style:       scrollbar;
+    height : 100%;
+}
+
+body{
+    vertical-align: baseline;
+    -webkit-font-smoothing: subpixel-antialiased;
+    cursor: default;
+    /*
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    */
+    margin: 0;
+    line-height: 1.2;
+    background-color: $body-background;
+    font-smooth: auto;
+    color : $font-color-default;
+    font-family: $font-family-default;
+    font-size: $font-size-default;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+article{
+    @include boxout;
+    position : relative;
+}
+
+main{
+    margin-bottom : 1rem !important;
+}
+
+main,
+.container{
+    padding : 0 1rem;
+    max-width : 992px;
+    margin : 0 auto;
+}
+
+.highlight{
+    color : $red;
+}

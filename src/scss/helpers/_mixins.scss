@@ -1,0 +1,28 @@
+@mixin boxshadow($color: $navy){
+    box-shadow: 2px 2px 3px rgba($color, 0.05),
+                4px 4px 6px rgba($color, 0.05);
+}
+
+@mixin boxout{
+    background-color : white;
+    padding : 1.25rem 2rem;
+    border-radius : 0.5rem;
+    @include boxshadow;
+    @media only screen and (min-width: 1200px) {
+        padding : 1.75rem 3rem;
+    }
+}
+
+@mixin bullet-list(){
+    position : relative;
+    &::before{
+      width : 1.5em;
+      height : 1.5em;    
+      position : absolute;
+      left : -2em;
+      display : inline-block;
+      text-align: center;
+      content : url("../images/bullet.svg");
+      line-height : 2;
+    }
+  }

@@ -1,0 +1,45 @@
+
+$grey : #F3F4F6;
+$yellow : #FFD731;
+$blue : #04B9F9; // non accessible
+$blue-dark : #0f71ee;
+$navy: #1F293A;
+$navy-tint : #5A6D8B;
+$red : #A11D3D;
+$red-tint : #FFE9EB;
+$olive : #56876D;
+
+$theme-primary : $blue;
+$theme-secondary : $yellow;
+
+$body-background : $grey;
+$font-sans: 'Source Sans 3', sans-serif;
+
+$font-family-default: $font-sans;
+$font-size-default: 16px;
+$font-color-default: #33363F;
+
+$seperator_color: rgba($navy-tint, 0.5);
+
+$link_color : $blue-dark;
+$link_color-hover : $red;
+
+$button_color_default: $navy;
+$button_background_default: $grey;
+$button_color_active: $navy;
+$button_background_active: $yellow;
+
+$navigation_background: $navy;
+$navigation_tint: $navy;
+
+$navbutton_color_default: white;
+$navbutton_background_default: $navy-tint;
+$navbutton_color_active: $navy;
+$navbutton_background_active: $blue;
+
+$navtext_color_default: $font-color-default;
+$navtext_color_active: $navy;
+
+$navbutton_color_active: $navy;
+
+$list_indent:                   2em;

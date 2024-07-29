@@ -1,0 +1,60 @@
+.site-header{
+    background : $navy;
+    padding : 1rem;
+    color : white;
+    margin-bottom : 25px;
+
+    
+
+    .container{
+        display : flex;
+        align-items : center;  
+        justify-content : space-between;
+        gap : 10px;
+
+        @media screen and (max-width: 55em){
+            flex-direction : column;
+            justify-content : center;
+            text-align : center;
+            .strapline{
+                text-align : center;
+            }
+        }
+        .strapline{
+            max-width : 385px;
+            font-size : 23px;
+            @media screen and (max-width: 420px){
+                font-size : 1rem;
+            }
+            span{
+                font-size : 1rem;
+                letter-spacing : -0.4px;
+                @media screen and (min-width: 421px){
+                    color : $blue;
+                    display : block;
+                    a{
+                        color : white;
+                        &:hover{
+                            color : $yellow;
+                        }
+                    }
+                }
+                
+            }
+        }
+    }
+    
+    a{
+        color : $yellow;
+        &:hover{
+            color : $blue;
+        }
+    }
+
+    svg{
+        display : inline-block;
+        height : 42px;
+        width : auto;
+    }
+    
+}

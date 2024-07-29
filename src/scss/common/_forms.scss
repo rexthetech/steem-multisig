@@ -1,0 +1,305 @@
+form{
+    label{
+        font-weight : bold;
+        font-size : 0.875rem;
+        margin : 0 0 0.25rem 0;
+        line-height : 1.25;
+    }
+    fieldset{
+        margin : 0;
+        padding : 0;
+        border : 0;
+
+        @media screen and (min-width: 40em){
+            margin : 1rem 0;
+            .fieldgroup{
+                &:first-of-type{
+                    label   { display : block; }
+                    button  { margin-top : 1.25rem; }
+                }
+                label{ display : none; }
+            }
+        }
+        
+    }
+
+    &.convert-address{
+        .fieldgroup{
+              @media screen and (max-width: 40em){
+                .formfield:first-of-type{
+                    flex : 1 1 100%;
+                }
+            }
+            @media screen and (min-width: 40em){
+                .formfield:first-of-type{
+                    flex : 0 0 50%;
+                }
+            }
+        }
+    }
+    
+    .radioGroup{
+        display : grid;
+        gap : 10px 1rem;
+        margin-bottom : 1rem;
+        align-items : flex-start;
+        flex-wrap : wrap;
+        
+        &.horizontal{
+            grid-template-columns : 1fr;
+            @media screen and (min-width: 48em){ grid-template-columns : 1fr 1fr; }
+            @media screen and (min-width: 62em){ grid-template-columns : 1fr 1fr 1fr; }
+        }
+
+        &.vertical{
+            grid-template-columns : 1fr;
+        }
+
+        .radioField{
+            label{
+                display : inline-flex;
+                align-items : center;
+                gap : 0.5em;
+
+                input{
+                    margin : 0;
+                }
+
+                .label-text{
+                    color : $red;
+                }
+                .label-extra{
+                    font-weight : 400;
+                }
+            }
+        }
+    }
+    .fieldgroup{
+        display : flex;
+        gap : 10px;
+        margin-bottom : 10px;
+        align-items : flex-start;
+        flex-wrap : wrap;
+
+        @media screen and (max-width: 40em){
+            flex-wrap : wrap;
+            border-top : 1px dotted $red;
+            margin-top : 1rem;
+            padding-top : 1rem;
+            button  { margin-top : 1.25rem; }
+        }
+        
+        button{
+            background-color : $navy;
+            color : white;
+        }
+    }
+    .formfield{
+        display : flex;
+        flex-grow : 1;
+        flex-direction: column;
+        input{
+            border : 1px solid black;
+            padding : 0.5rem 0.75rem;
+            border-radius : 0.25rem;
+            font-size : 0.875rem;
+        }
+        .prepend{
+            display : flex;
+            .affix{
+                background-color : $grey;
+                border-radius : 0.25rem 0 0 0.25rem;
+                display : inline-flex;
+                justify-content: center;
+                align-items: center;
+                font-weight : bold;
+                border-width : 1px 0 1px 1px;
+                border-style : solid;
+                border-color: black;
+                padding : 0 0.313rem;
+            }
+            input{
+                border-radius : 0 0.25rem 0.25rem 0;
+                padding-left : 0.5rem;
+                flex-grow : 1;
+            }
+        }
+        .append{
+            display : flex;
+            .suffix{
+                background-color : $grey;
+                border-radius : 0 0.25rem 0.25rem 0;
+                display : inline-flex;
+                justify-content: center;
+                align-items: center;
+                font-weight : bold;
+                border-width : 1px 1px 1px 0;
+                border-style : solid;
+                border-color: black;
+                padding : 0 0.313rem;
+            }
+            input{
+                border-radius : 0.25rem 0 0 0.25rem;
+                padding-left : 0.5rem;
+                flex-grow : 1;
+            }
+        }
+    }
+    .buttonRow{
+        display : flex;
+        gap : 10px;
+        margin-top : 1rem;
+    }
+    button{
+        display : block;
+        background : $yellow;
+        color : $navy;
+        text-align : center;
+        border : none;
+        padding : 0.5rem 0.75rem;
+        display : inline-block;
+        text-decoration : none;
+        border-radius : 0.25rem;
+        font-size : 1rem;
+        font-weight : 700;
+        transition : all 0.3s ease;
+        cursor: pointer;
+
+        &.cta{
+            background-color : $olive;
+            color : white;
+            text-decoration : none;
+        }
+    
+        &:hover{
+            background-color : $red;
+            color : white;
+            text-decoration : none;
+        }
+      
+    }
+    .message{
+        font-size : 0.875rem;
+        padding : 0.5rem 0;
+        color : $red;
+        font-weight : 300;
+    }
+    .error-message{
+        color : $red;
+        padding : 0.5rem;
+        font-size : 0.875rem;
+        background-color : rgba($red, 0.1);
+        border-radius : 0.25rem;
+        margin-top : 0.25rem;
+        border : 1px solid $red;
+        border-left-width : 6px;
+    }
+
+
+    .transactionList{
+        gap : 0.5rem;
+        display : flex;
+        flex-direction : column;
+
+        .radioField{
+            padding : 0.5rem 1rem;
+            background : $grey;
+            border-radius : 0.5rem;
+            border : 1px solid $grey;
+            gap : 0.75rem;
+
+            &.selected{
+                border : 1px solid $navy;
+            }
+            &:hover{
+                border : 1px solid $red;
+            }
+
+            label{
+                gap : 0.75rem;
+                display : flex;
+                // flex-wrap : wrap;
+            }
+            .transaction{
+                .transaction-title{
+                    font-size : 1.125rem;
+                    flex-basis : 100%;
+                }
+                .transaction-text{
+                    color : $red;
+                    font-size : 1rem;
+                    flex-basis : 100%;
+                }
+                .transaction-meta{
+                    display : flex;
+                    gap : 1rem;
+                    margin-top : 0.25rem;
+                    font-weight : 400;
+                    @media screen and (max-width: 46em){
+                        border-top: 1px dotted black;
+                        padding-top: 0.5em;
+                        margin-top: 0.5em;
+                        flex-direction : column;
+                        gap : 0.25em;
+                    }
+                    em{
+                        color : $red;
+                        font-style : normal;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+
+.process-summary{
+    margin : 0 0 1rem 0;
+    padding : 1rem;
+    background : $grey;
+    border-radius : 0.5rem;
+    display : flex;
+    flex-wrap : wrap;
+    gap : 10px;
+    .process-row{
+        display : flex;
+        flex-basis : 100%;
+        @media screen and (max-width: 46em){
+            flex-direction : column;
+            gap : 10px;
+        }
+
+        .process-cell{
+            flex-basis : 33.33%;
+            @media screen and (max-width: 33.75em){
+                flex-direction : column;
+            }
+            @media screen and (min-width: 46.0625em){
+                flex-basis : 50%;
+            }
+            display : flex;
+            span{
+                font-size : 0.875rem;
+                font-weight : bold;
+                display : inline-block;
+                flex-basis : 50%;
+            }
+        }
+    }
+}
+
+.cta-buttons{
+    display : grid;
+    gap : 10px 1rem;
+    margin-bottom : 1rem;
+    flex-wrap : wrap;
+    grid-template-columns : 1fr;
+    @media screen and (min-width: 48em){ grid-template-columns : 1fr 1fr; }
+    @media screen and (min-width: 62em){ grid-template-columns : 1fr 1fr 1fr; }
+    .button{
+        display : flex;
+        gap : 0.25em;
+    }
+}
+

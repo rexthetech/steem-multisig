@@ -1,0 +1,16 @@
+.wp-block-table{
+    table{
+        border : 1px solid $theme-color-1;
+        border-spacing : 0;
+        border-collapse : seperate;
+
+        td, th{
+            border : 1px solid $theme-color-1;
+            padding : 0.5rem 1rem;
+        }
+        th{
+            background-color : $theme-color-3;
+            color : white;
+        }
+    }
+}
